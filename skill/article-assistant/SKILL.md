@@ -47,14 +47,16 @@ When invoked by `$wechat-article-pipeline`, treat these as required handoff rule
 3. Save the file under the current working directory.
 4. Return only the final Markdown path so downstream steps can consume it directly.
 5. Keep WeChat renderer compatibility:
-   - one H1 at top
+   - do not output a top-level H1 title in article body (title is filled in WeChat publish form)
+   - start body directly from intro paragraph or H2/H3 sections
    - no standalone raw HTML image blocks like `<img ... />`
    - standard Markdown image syntax only
 
 ## Output contract
 
 - Deliver valid Markdown.
-- Use H1 once, then H2/H3 hierarchy.
+- Do not output a top-level H1 title in article body to avoid duplicate display with WeChat publish title.
+- Use H2/H3 hierarchy when headings are needed.
 - Do not prepend metadata labels at the top (no Title/Summary/Target Audience/Estimated Read Time block).
 - Include a references section at bottom when external facts are used.
 - Keep image embeds in standard Markdown image syntax:
