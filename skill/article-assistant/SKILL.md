@@ -14,6 +14,9 @@ This skill can be called directly by users or used as the writing stage of `$wec
 1. Define article goal, audience, tone, and target length.
    - If user does not specify length/scope, default to about 600 Chinese characters.
 2. Run research pass using topic-research workflow.
+   - Research must start with Brave Web Search on the given topic/title.
+   - Brave token should be read from `~/.pw` by default.
+   - Write only after research produces usable facts/angles; otherwise state uncertainty and narrow scope before drafting.
 3. Build structure using article-outline workflow.
 4. Draft full text using article-draft workflow.
 5. Improve readability using article-polish workflow.
