@@ -36,6 +36,26 @@ This repository contains the complete 11-skill chain for:
 - Output target is WeChat draft only (not free publish).
 - Runtime dependencies (`node_modules`) are intentionally excluded from this repository.
 
+## One-Command Install
+
+Specify only your local skills directory:
+
+```bash
+./scripts/install-skills.sh ~/.codex/skills
+```
+
+Optional: skip verify phase
+
+```bash
+./scripts/install-skills.sh ~/.codex/skills --skip-verify
+```
+
+What the installer does:
+
+1. Copies all skills from `skill/` into your target skills directory.
+2. Installs dependencies for every copied skill that has `package.json`.
+3. Runs `verify` automatically for skills that expose a verify script.
+
 ## Quick Verify
 
 ```bash
