@@ -12,6 +12,7 @@ This skill can be called directly by users or used as the writing stage of `$wec
 ## Workflow
 
 1. Define article goal, audience, tone, and target length.
+   - If user does not specify length/scope, default to about 600 Chinese characters.
 2. Run research pass using topic-research workflow.
 3. Build structure using article-outline workflow.
 4. Draft full text using article-draft workflow.
@@ -26,6 +27,7 @@ This skill can be called directly by users or used as the writing stage of `$wec
 When invoked by `$wechat-article-pipeline`, treat these as required handoff rules:
 
 1. Preserve the user's writing requirements (topic, audience, tone, length/scope, must-have points).
+   - If length/scope is missing, use the default length of about 600 Chinese characters.
 2. Generate exactly one final Markdown article.
 3. Save the file under the current working directory.
 4. Return only the final Markdown path so downstream steps can consume it directly.

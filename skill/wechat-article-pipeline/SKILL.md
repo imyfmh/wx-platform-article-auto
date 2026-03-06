@@ -24,7 +24,7 @@ Collect these before running:
 2. Article topic and requirements
    - target audience
    - tone
-   - length or scope if provided
+   - length or scope if provided (if not provided, default to about 600 Chinese characters)
 
 Optional but preferred:
 
@@ -37,6 +37,7 @@ Optional but preferred:
 1. Use `$article-assistant` as the only article-writing entry point.
    - Do not directly run `topic-research` / `article-outline` / `article-draft` / `article-polish` in this skill.
    - Pass user requirements (topic, audience, tone, length/scope, constraints) to `$article-assistant`.
+   - If the user does not specify length/scope, pass the default length target: about 600 Chinese characters.
    - Require `$article-assistant` to return exactly one final Markdown file path saved under the current working directory.
 2. If the user did not provide a cover, try `$auto-cover-selector`.
    - default credentials path is still `~/.pw`
