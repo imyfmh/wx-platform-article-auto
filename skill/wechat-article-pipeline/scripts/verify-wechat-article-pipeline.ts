@@ -3,10 +3,13 @@ import { execFile } from 'node:child_process'
 import http from 'node:http'
 import os from 'node:os'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { promisify } from 'node:util'
 
 const execFileAsync = promisify(execFile)
 const ONE_BY_ONE_PNG_BASE64 = `iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9WHZcZ0AAAAASUVORK5CYII=`
+const scriptDir = path.dirname(fileURLToPath(import.meta.url))
+const buildAndPublishScriptPath = path.join(scriptDir, `build-and-publish-wechat-draft.ts`)
 
 async function main() {
   const runDir = await mkdtemp(path.join(os.tmpdir(), `wechat-article-pipeline-`))
@@ -76,12 +79,12 @@ async function main() {
 
     await execFileAsync(`node`, [
       `--experimental-strip-types`,
-      path.resolve(`skills/wechat-article-pipeline/scripts/build-and-publish-wechat-draft.ts`),
+      buildAndPublishScriptPath,
       `--markdown`, markdownPath,
       `--html`, htmlPath,
       `--api-base`, `http://127.0.0.1:${address.port}/cgi-bin`,
     ], {
-      cwd: path.resolve(`.`),
+      cwd: runDir,
       env: {
         ...process.env,
         HOME: runDir,
