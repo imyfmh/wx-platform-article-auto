@@ -1,0 +1,14 @@
+theme: default
+primaryColor: "#0F4C81"
+fonts: "-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif"
+fontSize: "16px"
+useIndent: false
+useJustify: true
+showFootnotes: true
+showReadingTime: true
+showLineNumbers: false
+macCodeBlock: true
+legend: "alt"
+codeBlockTheme: "github"
+debugOutput: true
+strict: true

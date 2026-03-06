@@ -1,0 +1,4 @@
+interface:
+  display_name: "Article Outline"
+  short_description: "Create clear article structures and section plans."
+  default_prompt: "Create an outline for this article topic."

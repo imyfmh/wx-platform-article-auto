@@ -1,0 +1,9 @@
+{
+  "name": "auto-cover-selector-skill",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "select-cover": "node --experimental-strip-types ./scripts/select-cover.ts",
+    "verify": "node --experimental-strip-types ./scripts/verify-auto-cover-selector.ts"
+  }
+}

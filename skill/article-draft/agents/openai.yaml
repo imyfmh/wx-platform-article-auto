@@ -1,0 +1,4 @@
+interface:
+  display_name: "Article Draft"
+  short_description: "Expand outlines into complete Markdown drafts."
+  default_prompt: "Turn this outline and research into a full draft."

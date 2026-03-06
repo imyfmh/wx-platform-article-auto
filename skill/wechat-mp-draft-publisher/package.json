@@ -1,0 +1,9 @@
+{
+  "name": "wechat-mp-draft-publisher-skill",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "publish": "node --experimental-strip-types ./scripts/publish-wechat-draft.ts",
+    "verify": "node --experimental-strip-types ./scripts/verify-wechat-draft-publisher.ts"
+  }
+}

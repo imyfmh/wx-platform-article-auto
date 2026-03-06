@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image Link Curator"
+  short_description: "Embed image links in Markdown with fixed size."
+  default_prompt: "Add properly sized image links to this article."

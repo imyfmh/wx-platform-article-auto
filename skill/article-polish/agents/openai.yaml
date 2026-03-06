@@ -1,0 +1,4 @@
+interface:
+  display_name: "Article Polish"
+  short_description: "Improve flow, tone, and readability of drafts."
+  default_prompt: "Polish this draft while keeping facts accurate."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Article Assistant"
+  short_description: "Create complete Markdown articles with image links."
+  default_prompt: "Write a full article with images and output Markdown."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Draft Publisher"
+  short_description: "Publish WeChat HTML into the WeChat draft box."
+  default_prompt: "Use $wechat-mp-draft-publisher to upload the cover, rewrite article images, and create a WeChat Official Account draft from this HTML."

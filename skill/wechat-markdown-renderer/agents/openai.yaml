@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Markdown Renderer"
+  short_description: "Convert Markdown into deterministic WeChat article HTML."
+  default_prompt: "Use $wechat-markdown-renderer to convert this Markdown article into WeChat-ready HTML with strict validation."

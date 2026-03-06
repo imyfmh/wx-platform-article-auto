@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fact Check"
+  short_description: "Verify article claims and reduce factual risk."
+  default_prompt: "Fact-check this draft and mark risky claims."

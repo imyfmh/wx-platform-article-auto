@@ -1,0 +1,4 @@
+interface:
+  display_name: "Topic Research"
+  short_description: "Gather article facts and source-backed insights."
+  default_prompt: "Research this topic and prepare a writing brief."
