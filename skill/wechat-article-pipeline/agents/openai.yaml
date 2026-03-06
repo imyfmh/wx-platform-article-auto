@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Article Pipeline"
+  short_description: "Write an article, render WeChat HTML, and create a WeChat draft."
+  default_prompt: "Use $wechat-article-pipeline to collect the credentials file path and article topic, write the article, convert it to WeChat HTML, and create a WeChat draft."

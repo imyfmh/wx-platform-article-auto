@@ -1,0 +1,9 @@
+{
+  "name": "wechat-article-pipeline-skill",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "publish-draft": "node --experimental-strip-types ./scripts/build-and-publish-wechat-draft.ts",
+    "verify": "node --experimental-strip-types ./scripts/verify-wechat-article-pipeline.ts"
+  }
+}
