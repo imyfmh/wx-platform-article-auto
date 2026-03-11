@@ -19,13 +19,13 @@ This skill can be called directly by users or used as the writing stage of `$wec
    - Write only after research produces usable facts/angles; otherwise state uncertainty and narrow scope before drafting.
 3. Build structure using article-outline workflow.
 4. Draft full text using article-draft workflow, strictly following `references/custom-writing-prompt.md`.
-5. Improve readability using article-polish workflow without diluting the custom style prompt.
+5. Improve readability using article-polish workflow while keeping the same writing constraints from `references/custom-writing-prompt.md`.
 6. Validate key claims and dates using fact-check workflow.
 7. Insert image links using image-link-curator workflow.
 8. Save the final Markdown to the current Codex working directory.
 9. Return only the saved file path by default (unless user asks for process logs).
 
-## Mandatory style prompt
+## Mandatory writing prompt
 
 Before running drafting/polish steps, always read and apply:
 
@@ -33,9 +33,9 @@ Before running drafting/polish steps, always read and apply:
 
 Execution rule:
 
-- Treat that file as a hard constraint for title/opening/subtitles/style/content/ending/wording.
+- Treat that file as the single source of truth for writing requirements.
 - If any user request conflicts with that prompt, ask user to confirm override explicitly.
-- Pass the same style constraints unchanged into `$article-draft` and `$article-polish`.
+- Pass the same writing constraints unchanged into `$article-draft` and `$article-polish`.
 
 ## Integration contract for `$wechat-article-pipeline`
 
@@ -58,7 +58,6 @@ When invoked by `$wechat-article-pipeline`, treat these as required handoff rule
 - Do not output a top-level H1 title in article body to avoid duplicate display with WeChat publish title.
 - Use H2/H3 hierarchy when headings are needed.
 - Do not prepend metadata labels at the top (no Title/Summary/Target Audience/Estimated Read Time block).
-- Include a references section at bottom when external facts are used.
 - Keep image embeds in standard Markdown image syntax:
 
 ```md

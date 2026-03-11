@@ -5,17 +5,25 @@ description: Convert approved outlines and research into full article drafts in 
 
 # Article Draft
 
+## Mandatory writing prompt
+
+Before drafting, always read and apply:
+
+- `../article-assistant/references/custom-writing-prompt.md`
+
+Execution rule:
+
+- Treat that file as the only writing-style constraint source for draft wording.
+- Do not add extra writing-style rules in this skill beyond that file.
+
 ## Workflow
 
 1. Follow the provided outline strictly.
 2. Write section-by-section in Markdown.
-3. Use concrete examples and transitions.
-4. Keep paragraph length moderate for readability.
-5. Preserve placeholders for image inserts.
+3. Preserve placeholders for image inserts.
+4. Keep factual consistency with research inputs.
 
 ## Draft quality checks
 
-- Hook in first 120 words.
-- Clear section openings.
-- Actionable conclusion.
 - No fabricated data.
+- Keep structure aligned with the outline.

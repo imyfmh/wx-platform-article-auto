@@ -38,6 +38,8 @@ Optional but preferred:
    - Do not directly run `topic-research` / `article-outline` / `article-draft` / `article-polish` in this skill.
    - Pass user requirements (topic, audience, tone, length/scope, constraints) to `$article-assistant`.
    - If the user does not specify length/scope, pass the default length target: about 600 Chinese characters.
+   - Enforce that the writing stage strictly follows `../article-assistant/references/custom-writing-prompt.md` (resolved from `$article-assistant` skill directory).
+   - Do not introduce additional writing-style prompts in this pipeline skill.
    - Require `$article-assistant` to return exactly one final Markdown file path saved under the current working directory.
 2. If the user did not provide a cover, try `$auto-cover-selector`.
    - default credentials path is still `~/.pw`

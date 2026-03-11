@@ -5,16 +5,26 @@ description: Build structured article outlines with narrative flow, section goal
 
 # Article Outline
 
+## Mandatory writing prompt
+
+Before outlining, always read and apply:
+
+- `../article-assistant/references/custom-writing-prompt.md`
+
+Execution rule:
+
+- Treat that file as the only writing-style constraint source for outline wording.
+- Do not add extra writing-style rules in this skill beyond that file.
+
 ## Workflow
 
 1. Define thesis and reader takeaway.
-2. Build H1 + H2/H3 hierarchy.
+2. Build heading hierarchy that matches user requirements and downstream renderer constraints.
 3. Assign one clear purpose per section.
 4. Attach supporting evidence under each section.
 5. Add image slot markers like `[IMAGE: scene description]`.
 
 ## Rules
 
-- Keep 5–9 H2 sections for long-form articles.
 - Ensure each section answers one reader question.
 - Avoid overlapping sections.
